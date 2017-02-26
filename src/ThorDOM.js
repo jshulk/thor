@@ -51,7 +51,7 @@ function handleTemplate (vnode, parent, component) {
   if ( vnode.children && vnode.children.length) {
     for ( var i = 0; i < vnode.children; i++ ) {
       var children = vnode.children[i];
-      render(children, htmlElement);
+      render(children, htmlElement, component);
     }
   }
 }
@@ -71,7 +71,7 @@ function handleElement (vnode, parent, component) {
   if (vnode.children) {
     for (var i = 0; i < vnode.children.length; i++) {
       var children = vnode.children[i];
-      render(children, htmlElement);
+      render(children, htmlElement, component);
     }
   }
 
@@ -83,11 +83,11 @@ function createOrUpdateComponent(vnode, parent, parentComponent) {
     instance = componentRegistry[vnode.nodename.name];
   } else {
     instance = new vnode.nodename();
+    componentRegistry[vnode.nodename.name] = instance;
   }
   if (parentComponent) {
     parentComponent.__component = instance;
   }
-  componentRegistry[vnode.nodename.name] = instance;
   render(instance.render(), parent, instance);
 
 }

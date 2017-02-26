@@ -3,7 +3,7 @@ var Thor = require("thor");
 class TestComponent extends Thor.Component {
   render () {
     return (
-      <div>Test component</div>
+      <div id="bcd">Test component</div>
     )
   }
 }

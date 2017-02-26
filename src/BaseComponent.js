@@ -1,13 +1,17 @@
-module.exports = BaseComponent;
-function BaseComponent(){}
-BaseComponent.prototype = {
-  constructor: BaseComponent,
-  render: function(){ return null },
-  componentWillMount: function(){},
-  componentDidMount: function(){},
-  componentWillReceiveProps: function(){},
-  shouldComponentUpdate: function(){},
-  componentWillUpdate: function(){},
-  componentDidUpdate: function(){},
-  componentWillUnMount: function(){}
+class BaseComponent {
+  constructor(props) {
+    this.props = props;
+  }
+  render () {
+    return null;
+  }
+  componentWillMount () {}
+  componentDidMount () {}
+  componentWillReceiveProps () {}
+  shouldComponentUpdate () {}
+  componentWillUpdate () {}
+  componentDidUpdate () {}
+  componentWillUnMount () {}
 }
+
+module.exports = BaseComponent;

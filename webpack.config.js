@@ -29,7 +29,9 @@ module.exports = {
       "constants": path.resolve(__dirname, "src", "constants"),
       "models": path.resolve(__dirname, "src", "models"),
       "utils": path.resolve(__dirname, "src", "utils"),
-      "examples": path.resolve(__dirname, "src", "examples")
+      "examples": path.resolve(__dirname, "src", "examples"),
+      "thor": path.resolve(__dirname, "src", "thor"),
+      "h": path.resolve(__dirname, "src", "h")
     }
   },
   devServer: {

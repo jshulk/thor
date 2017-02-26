@@ -1,9 +1,11 @@
-var Component = require("models/Component");
-var h = require("../h");
-var TestComponent = Component.create({
-  render: function () {
+var h = require("h");
+var Thor = require("thor");
+class TestComponent extends Thor.Component {
+  render () {
     return (
       <div>Test component</div>
     )
   }
-});
+}
+
+module.exports = TestComponent;

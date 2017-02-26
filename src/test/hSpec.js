@@ -1,4 +1,4 @@
-var h = require('src/h');
+var h = require('h');
 describe(" test h working ", function () {
   it('should return correct tree for nested components', function () {
     var TestFunction = function TestFuntion(){};

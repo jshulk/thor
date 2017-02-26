@@ -1,14 +1,14 @@
-var Component = require("models/Component");
-var h = require("../h");
+var h = require("h");
 var HelloTemplate = require("templates/hello.hbs");
-var TestHBSComponent = Component.create({
-  render: function () {
+var Thor = require("thor");
+class TestHBSComponent extends Thor.Component {
+  render () {
     return (
-      <div>
+      <div id="abc">
         <HelloTemplate />
       </div>
     );
   }
-});
+}
 
 module.exports = TestHBSComponent;

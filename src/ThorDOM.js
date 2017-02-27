@@ -88,6 +88,9 @@ function createOrUpdateComponent(vnode, parent, parentComponent) {
   if (parentComponent) {
     parentComponent.__component = instance;
   }
+  if (instance.base) {
+    //this is an update
+  }
   render(instance.render(), parent, instance);
 
 }

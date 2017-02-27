@@ -12,6 +12,8 @@ class BaseComponent {
   componentWillUpdate () {}
   componentDidUpdate () {}
   componentWillUnMount () {}
+  getDefaultProps () {}
+  getInitialState () {}
 }
 
 module.exports = BaseComponent;
